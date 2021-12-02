@@ -136,3 +136,54 @@ function bob1(a) {
 // Arrow Function
 let bob = a => a + 100;
 console.log(bob(2));
+
+/*
+*******************************************************
+                          ARROW
+******************************************************
+*/
+//Arrow function syntax may look strange but it's actually simple.
+
+function callMe(name) { 
+    console.log(name);
+}
+//which you could also write as:
+
+const callMe = function(name) { 
+    console.log(name);
+}
+//becomes: 
+
+const callMe = (name) => { 
+    console.log(name);
+}
+//Important: 
+
+//When having no arguments, you have to use empty parentheses in the function declaration:
+
+const callMe = () => { 
+    console.log('Max!');
+}
+//When having exactly one argument, you may omit the parentheses:
+
+const callMe = name => { 
+    console.log(name);
+}
+//When just returning a value, you can use the following shortcut:
+
+const returnMe = name => name
+//That's equal to:
+
+const returnMe = name => { 
+    return name;
+}
+/*
+*********** MENCARI ARRAY *********
+*/
+
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find(element => element > 100);
+
+console.log(found);
+// expected output: 12
