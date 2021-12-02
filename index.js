@@ -149,24 +149,24 @@ function callMe(name) {
 }
 //which you could also write as:
 
-const callMe = function(name) { 
+const callMe4 = function(name) { 
     console.log(name);
 }
 //becomes: 
 
-const callMe = (name) => { 
+const callMe3 = (name) => { 
     console.log(name);
 }
 //Important: 
 
 //When having no arguments, you have to use empty parentheses in the function declaration:
 
-const callMe = () => { 
+const callMe5 = () => { 
     console.log('Max!');
 }
 //When having exactly one argument, you may omit the parentheses:
 
-const callMe = name => { 
+const callMe2 = name => { 
     console.log(name);
 }
 //When just returning a value, you can use the following shortcut:
@@ -174,7 +174,7 @@ const callMe = name => {
 const returnMe = name => name
 //That's equal to:
 
-const returnMe = name => { 
+const returnMe2 = name => { 
     return name;
 }
 /*
@@ -187,3 +187,13 @@ const found = array1.find(element => element > 100);
 
 console.log(found);
 // expected output: 12
+
+const inventory = [
+ {name: 'apples', quantity: 2},
+ {name: 'bananas', quantity: 0},
+ {name: 'cherries', quantity: 5}
+];
+
+const result = inventory.find( ({ name }) => name === 'cherries' );
+
+console.log(result) // { name: 'cherries', quantity: 5 }
